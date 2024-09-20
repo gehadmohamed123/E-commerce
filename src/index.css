@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600&family=Montserrat:wght@100;300;500&display=swap');
+
+:root {
+  --main-bg-color: #10141E;
+  --secondary-bg-color: #1c2230;
+  --text-color: #ffffff;
+  --subtitle-color: #b3b3b3;
+  --highlight-color: #ffffff;
+  --highlight-accent: #ff5a5f;
+}
+
+body {
+  background-color: var(--main-bg-color);
+  font-family: 'Montserrat', sans-serif;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.home-container,
+.about-container {
+  padding: 40px;
+  flex: 1;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 5px;
+}
+
+.section-subtitle {
+  font-size: 18px;
+  color: var(--subtitle-color);
+  margin-bottom: 20px;
+}
+
+.underline {
+  width: 80px;
+  height: 3px;
+  background-color: var(--highlight-color);
+  margin: 0 auto 40px auto;
+}
+
+.category-dropdown {
+  display: flex;
+  align-items: center;
+}
+
+.category-select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--highlight-color);
+  background-color: var(--secondary-bg-color);
+  color: var(--text-color);
+  transition: border-color 0.3s ease;
+}
+
+.category-select:hover {
+  cursor: pointer;
+  border-color: var(--highlight-color);
+}
+
+.products-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.product-card {
+  position: relative;
+  background-color: var(--secondary-bg-color);
+  border-radius: 10px;
+  overflow: hidden;
+  width: 180px;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+}
+
+.product-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.product-details {
+  padding: 15px;
+  text-align: center;
+}
+
+.product-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 10px 0;
+  color: var(--text-color);
+}
+
+.product-price {
+  font-size: 14px;
+  color: var(--highlight-color);
+}
+
+.wishlist-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.wishlist-icon:hover {
+  color: #ff5a5f;
+}
+
+.footer {
+  background-color: var(--secondary-bg-color);
+  padding: 20px 0;
+  text-align: center;
+  border-top: 1px solid #e0e0e0;
+  margin-top: auto;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.footer-links li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--highlight-color);
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.about-container {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.about-content {
+  background-color: var(--secondary-bg-color);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-title {
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--highlight-color);
+  margin-bottom: 20px;
+}
+
+.about-text {
+  font-size: 18px;
+  color: var(--text-color);
+  margin-bottom: 30px;
+}
+
+.highlighted-icons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.icon-item {
+  text-align: center;
+  color: var(--highlight-color);
+}
+
+.icon {
+  font-size: 40px;
+  transition: transform 0.3s ease;
+}
+
+.icon-item:hover .icon {
+  transform: scale(1.2);
+}
+
+.testimonials {
+  margin-top: 40px;
+}
+
+.testimonial-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.testimonial {
+  font-size: 18px;
+  font-style: italic;
+  color: var(--subtitle-color);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* Contact Page Styles */
+.contact-container {
+  background-color: var(--secondary-bg-color);
+  padding: 60px 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: center;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--subtitle-color);
+  font-size: 16px;
+}
+
+.contact-icon {
+  color: var(--highlight-accent);
+  font-size: 24px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--highlight-color);
+  border-radius: 5px;
+  background-color: var(--main-bg-color);
+  color: var(--text-color);
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  border-color: var(--highlight-accent);
+}
+
+.form-button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--highlight-accent);
+  color: var(--text-color);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+  background-color: #e0484a;
+}
+
+.social-media {
+  display: flex;
+  gap: 10px;
+  margin-top: 0;
+  align-items: center;
+}
+
+.right-nav ul {
+  display: flex;
+  align-items: center;
+}
+
+.right-nav li {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.right-nav i {
+  margin: 0;
+}
+
+.right-nav .cursor-pointer {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.social-icon {
+  color: var(--highlight-color);
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: var(--highlight-accent);
+}
